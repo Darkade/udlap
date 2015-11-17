@@ -1,0 +1,135 @@
+.titulo {
+ FONT-SIZE: 11px;
+ color: #426085;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ TEXT-DECORATION: none;
+  font-weight: bold;
+}
+
+.botonesSIE {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 9px;
+ color: #000000;
+ text-decoration: none;
+ font-weight: normal;
+}
+
+.liga_tituloSF{
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: bold;
+ color: #426085;
+ text-decoration: underline;
+ text-align: center;
+}
+
+.titulos_tabla {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: bold;
+ color: #426085;
+ background-color: #CFDDEE;
+ text-decoration: none;
+}
+
+.titulos_tablaSF {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: bold;
+ color: #426085;
+}
+
+
+.fechasFormatoSalida {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: normal;
+ color: #333333;
+ text-decoration: none;
+}
+
+.renglonNon {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+ background-color: #FFFFFF;
+}
+
+.renglonPar {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: normal;
+ color: #000000;
+ background-color: #E9E9E9;
+ text-decoration: none;
+}
+
+.renglonTituloColumnas {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: normal;
+ color: #426085;
+ background-color: #CFDDEE;
+ text-decoration: none;
+}
+
+.renglonTituloColumnasSF {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: normal;
+ color: #426085;
+ text-align: center;
+}
+
+.notasNotas {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 9px;
+ color: #000000;
+ text-decoration: none;
+ font-weight: normal;
+ text-align: justify;
+}
+
+.cd_tabla_renglon_seguido {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 11px;
+ font-weight: normal;
+ color: #333333;
+ text-decoration: none;
+}
+
+.liga{
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ color: #426085;
+ text-decoration: underline;
+ text-align: center;
+}
+
+.notasMicroAyuda {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ color: #000000;
+ text-decoration: none;
+ font-weight: normal;
+}
+
+.renglonNonLiga {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ color: #426085;
+ font-weight: normal;
+ text-decoration: underline;
+ background-color: #FFFFFF;
+}
+
+.renglonParLiga {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ color: #426085;
+ font-weight: normal;
+ text-decoration: underline;
+ background-color: #E9E9E9;
+}

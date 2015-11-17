@@ -1,0 +1,11 @@
+SUPUESTOS
+
+>TODAS las tasas se colocaron a efectivas a 28 dias. en el caso de cetes, al se simple se hizo tasa(28/365)
+
+>Para el 3 de septiembre de 98 no existen datos, asi que se interpolo con la anterior y la siguiente
+
+>Debido a que para Dolares no se encontraron datos (oficiales, BANXICO) antes de 1991 es a partir de esta fecha que empezaron a calcular las tasas
+
+>Para dolares el ultimo dato obtenido es del 26 de marzo 09 (por correspondencia por CETES), con este y el de 26 de febrero de 09 se calculo el rendimiento a 28 dias. Debido a esto la ultima tasa que se toma para CETES es tambien la del 26 de febrero.
+
+>Ya que para el Dolar en algunas ocaciones no existe precio se utilizo el precio anterior para los dias en los que no hay cotizacion

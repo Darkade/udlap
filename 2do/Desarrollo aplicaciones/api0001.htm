@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>API: Call the standard Windows File Open/Save dialog box</title>
+
+<link rel="stylesheet" type="text/css" href="api0001_archivos/styles.css"></head><body bottommargin="0" topmargin="0" rightmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<!--TopNav Begin-->
+<!--webbot bot="Include" U-Include="../_inc/topnav.htm" TAG="BODY" startspan -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td width="100%">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody><tr>
+        <td align="left" valign="bottom">
+        <a href="http://www.mvps.org/access/" title="The Access Web">
+        <img src="api0001_archivos/sitelogo.gif" border="0" height="62" width="210"></a></td>
+        <td align="right" nowrap="nowrap" valign="bottom">
+        <table class="CToolBar" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td nowrap="nowrap"><img src="api0001_archivos/curve_left.gif" border="0" height="16" width="16"></td>
+            <td class="CToolBar" align="center" nowrap="nowrap">
+            &nbsp;&nbsp;<a class="CToolbarItem" href="http://www.mvps.org/access/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a class="CToolbarItem" href="http://www.mvps.org/accessfr/">French</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a class="CToolbarItem" href="http://www.mvps.org/access/about.htm">About</a>&nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a class="CToolbarItem" href="http://www.mvps.org/access/search.htm">Search</a>&nbsp;&nbsp;|
+            <a class="CToolbarItem" href="http://www.mvps.org/">mvps.org</a>&nbsp;&nbsp;
+            </td>
+            <td nowrap="nowrap"><img src="api0001_archivos/curve_right.gif" border="0" height="16" width="16"></td>
+          </tr>
+        </tbody></table>
+        </td>
+      </tr>
+    </tbody></table>
+    </td>
+  </tr>
+	<tr><td width="100%"><img src="api0001_archivos/spacer.gif" border="0" height="5" width="1"></td></tr>      
+    <tr><td class="CLine" width="100%">
+        <img src="api0001_archivos/spacer.gif" border="0" height="1" width="1"></td></tr>
+	<tr><td width="100%"><img src="api0001_archivos/spacer.gif" border="0" height="5" width="1"></td></tr>      
+</tbody></table>
+<!--webbot bot="Include" i-checksum="40379" endspan -->
+<!--TopNav End-->
+<img src="api0001_archivos/spacer.gif" border="0" height="5" width="1"><br>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td nowrap="nowrap" valign="top">
+		<!--Left Nav begin-->
+		<!--webbot bot="Include" U-Include="../_inc/leftnav.htm" TAG="BODY" startspan -->
+    	<table border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td rowspan="3" class="CToolBar"><img src="api0001_archivos/spacer.gif" border="0" height="10" width="5"></td>
+        		<td class="CToolBar" align="right">
+                <img src="api0001_archivos/curve_right.gif" border="0" height="16" width="16"></td>
+      		</tr>
+      		<tr>
+        		<td class="CToolBar" nowrap="nowrap">
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/whatsnew.htm">What's New</a><br>
+					<a class="CToolbarItem" href="http://www.mvps.org/access/toc.htm">Table Of Contents</a> <br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/acknowledge.htm">Credits</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/netiquette.htm">Netiquette</a><br>
+                    <a class="CToolbarItem" href="http://www.mvps.org/access/tencommandments.htm">10 Commandments</a>&nbsp;<br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/bugs/index.html">Bugs</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/tables/index.html">Tables</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/queries/index.html">Queries</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/forms/index.html">Forms</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/reports/index.html">Reports</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/modules/index.html">Modules</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/api/index.html">APIs</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/strings/index.html">Strings</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/datetime/index.html">Date/Time</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/general/index.html">General</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/resources/downloads.htm">Downloads</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/resources/index.html">Resources</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/search.htm">Search<br>
+        			</a><a class="CToolbarItem" href="http://www.mvps.org/access/feedback.htm">Feedback</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/">mvps.org</a><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/faq/">FAQs</a><p>
+                    <a href="http://www.mvps.org/access/in_memoriam.htm"><layer id="google-toolbar-hilite-7" style="background-color: Chartreuse; color: black;">In</layer> Memoriam</a><br><br>
+        			<a class="CToolbarItem" href="http://www.mvps.org/access/terms.htm">Terms of Use</a>
+        		</p></td>
+      		</tr>
+      		<tr><td class="CToolBar" align="right">
+              <img src="api0001_archivos/curve_bottoml.gif" border="0" height="16" width="16"></td></tr>
+      		<tr>
+      			<td rowspan="3"><img src="api0001_archivos/spacer.gif" border="0" height="1" width="1"></td>
+      			<td align="center">
+<!-- added by Dev; Mar-9-05 -->
+<img src="api0001_archivos/spacer.gif" border="0" height="2" width="1"><br>
+<a href="http://www.mvps.org/cgi-bin/ads/ads.pl?banner=NonSSI;zone=petsmall;page=1">
+    <img src="api0001_archivos/ads" alt="VB Petition" border="0" height="90" width="150"></a>
+<!-- added by Dev; Mar-9-05 -->      			
+      				<img src="api0001_archivos/spacer.gif" border="0" height="2" width="1"><br>
+      				<a title="Microsoft Most Valuable Professional" href="http://mvp.support.microsoft.com/">
+	      				<img src="api0001_archivos/logomvp.gif" border="0" height="89" width="108">
+      				</a>
+      			</td>
+      		</tr>
+    </tbody></table>
+<!--webbot bot="Include" i-checksum="41937" endspan -->
+		<!--Left Nav end-->
+    </td>
+    <td valign="top"><img src="api0001_archivos/spacer.gif" border="0" height="4" width="15"></td>
+    <td valign="top" width="100%">
+    	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+        	<tbody><tr>
+        		<td rowspan="2" valign="bottom"><p class="CPageTitle" align="left">
+                <a class="CPageTitleLink" href="http://www.mvps.org/access/api/index.html">API</a>: Call the standard Windows File Open/Save dialog box</p></td>
+            	<td class="CAuthor" align="right">Author(s)</td>
+            </tr>
+        	<tr><td class="CCredits" id="authors" align="right" nowrap="nowrap">Ken Getz</td></tr>
+        	<tr><td colspan="2" class="CToolBar" valign="bottom">
+              <img src="api0001_archivos/spacer.gif" border="0" height="1" width="1"></td></tr>
+        	<tr><td colspan="2" width="100%"><img src="api0001_archivos/spacer.gif" border="0" height="10" width="1"></td></tr>
+        	<tr>
+	       		<td colspan="2" width="100%">
+	       		<!-- Body Start-->
+	       		&nbsp;
+	       		<!-- Body End-->
+                This can be done by either using the Common Dialog Control <layer id="google-toolbar-hilite-8" style="background-color: Chartreuse; color: black;">in</layer> Access 97 or by using
+the APIs defined for this purpose.<p>&nbsp; To call the actual dialog from your code, see the 
+                included function <i>TestIt</i>() within the
+module or use the following example as a guideline and </p>
+
+<p>Dim strFilter As String<br>
+Dim strInputFileName as string<br>
+<br>
+strFilter = ahtAddFilterItem(strFilter, "Excel <layer id="google-toolbar-hilite-0" style="background-color: Cyan; color: black;">Files</layer> (*.XLS)", "*.XLS")<br>
+strInputFileName = ahtCommonFileOpenSave( _<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Filter:=strFilter, OpenFile:=True, _<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+DialogTitle:="Please select an input file...", _<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Flags:=ahtOFN_HIDEREADONLY)</p>
+
+<p>Note that <layer id="google-toolbar-hilite-9" style="background-color: Chartreuse; color: black;">in</layer> order to call the Save As dialog box, you can use the same wrapper
+function by just setting the OpenFile option as False. For example,<br>
+</p>
+
+<p><b class="cComment">'Ask for SaveFileName<br></b>
+strFilter = ahtAddFilterItem(myStrFilter, "Excel <layer id="google-toolbar-hilite-1" style="background-color: Cyan; color: black;">Files</layer> (*.xls)",
+"*.xls")<br>
+strSaveFileName = ahtCommonFileOpenSave( _<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+OpenFile:=False,
+_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Filter:=strFilter, _<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Flags:=ahtOFN_OVERWRITEPROMPT Or ahtOFN_READONLY)</p>
+                <pre><font class="CComment">'***************** Code Start **************
+'This code was originally written by Ken Getz.
+'It is not to be altered or distributed,
+'except as part of an application.
+'You are free to use it <layer id="google-toolbar-hilite-10" style="background-color: Chartreuse; color: black;">in</layer> any application,
+'provided the copyright notice is left unchanged.
+'
+' Code courtesy of:
+' <a href="http://www.developershandbook.com/">Microsoft Access 95 How-To</a>
+' Ken Getz and Paul Litwin
+' Waite Group Press, 1996</font>
+
+Type tagOPENFILENAME
+    lStructSize As Long
+    hwndOwner As Long
+    hInstance As Long
+    strFilter As String
+    strCustomFilter As String
+    nMaxCustFilter As Long
+    nFilterIndex As Long
+    strFile As String
+    nMaxFile As Long
+    strFileTitle As String
+    nMaxFileTitle As Long
+    strInitialDir As String
+    strTitle As String
+    Flags As Long
+    nFileOffset As Integer
+    nFileExtension As Integer
+    strDefExt As String
+    lCustData As Long
+    lpfnHook As Long
+    lpTemplateName As String
+End Type
+
+Declare Function aht_apiGetOpenFileName Lib "comdlg32.dll" _
+    Alias "GetOpenFileNameA" (OFN As tagOPENFILENAME) As Boolean
+
+Declare Function aht_apiGetSaveFileName Lib "comdlg32.dll" _
+    Alias "GetSaveFileNameA" (OFN As tagOPENFILENAME) As Boolean
+Declare Function CommDlgExtendedError Lib "comdlg32.dll" () As Long
+
+Global Const ahtOFN_READONLY = &amp;H1
+Global Const ahtOFN_OVERWRITEPROMPT = &amp;H2
+Global Const ahtOFN_HIDEREADONLY = &amp;H4
+Global Const ahtOFN_NOCHANGEDIR = &amp;H8
+Global Const ahtOFN_SHOWHELP = &amp;H10
+<font class="CComment">' You won't use these.
+'Global Const ahtOFN_ENABLEHOOK = &amp;H20
+'Global Const ahtOFN_ENABLETEMPLATE = &amp;H40
+'Global Const ahtOFN_ENABLETEMPLATEHANDLE = &amp;H80</font>
+Global Const ahtOFN_NOVALIDATE = &amp;H100
+Global Const ahtOFN_ALLOWMULTISELECT = &amp;H200
+Global Const ahtOFN_EXTENSIONDIFFERENT = &amp;H400
+Global Const ahtOFN_PATHMUSTEXIST = &amp;H800
+Global Const ahtOFN_FILEMUSTEXIST = &amp;H1000
+Global Const ahtOFN_CREATEPROMPT = &amp;H2000
+Global Const ahtOFN_SHAREAWARE = &amp;H4000
+Global Const ahtOFN_NOREADONLYRETURN = &amp;H8000
+Global Const ahtOFN_NOTESTFILECREATE = &amp;H10000
+Global Const ahtOFN_NONETWORKBUTTON = &amp;H20000
+Global Const ahtOFN_NOLONGNAMES = &amp;H40000
+<font class="CComment">' New for Windows 95</font>
+Global Const ahtOFN_EXPLORER = &amp;H80000
+Global Const ahtOFN_NODEREFERENCELINKS = &amp;H100000
+Global Const ahtOFN_LONGNAMES = &amp;H200000
+
+Function TestIt()
+    Dim strFilter As String
+    Dim lngFlags As Long
+    strFilter = ahtAddFilterItem(strFilter, "Access <layer id="google-toolbar-hilite-2" style="background-color: Cyan; color: black;">Files</layer> (*.mda, *.mdb)", _
+                    "*.MDA;*.MDB")
+    strFilter = ahtAddFilterItem(strFilter, "dBASE <layer id="google-toolbar-hilite-3" style="background-color: Cyan; color: black;">Files</layer> (*.dbf)", "*.DBF")
+    strFilter = ahtAddFilterItem(strFilter, "Text <layer id="google-toolbar-hilite-4" style="background-color: Cyan; color: black;">Files</layer> (*.txt)", "*.TXT")
+    strFilter = ahtAddFilterItem(strFilter, "All <layer id="google-toolbar-hilite-5" style="background-color: Cyan; color: black;">Files</layer> (*.*)", "*.*")
+    MsgBox "You selected: " &amp; ahtCommonFileOpenSave(InitialDir:="C:\", _
+        Filter:=strFilter, FilterIndex:=3, Flags:=lngFlags, _
+        DialogTitle:="Hello! Open Me!")
+    <font class="CComment">' Since you passed <layer id="google-toolbar-hilite-11" style="background-color: Chartreuse; color: black;">in</layer> a variable for lngFlags,
+    ' the function places the output flags value <layer id="google-toolbar-hilite-12" style="background-color: Chartreuse; color: black;">in</layer> the variable.</font>
+    Debug.Print Hex(lngFlags)
+End Function
+
+Function GetOpenFile(Optional varDirectory As Variant, _
+    Optional varTitleForDialog As Variant) As Variant
+<font class="CComment">' Here's an example that gets an Access database name.</font>
+Dim strFilter As String
+Dim lngFlags As Long
+Dim varFileName As Variant
+<font class="CComment">' Specify that the chosen file must already exist,
+' don't change directories when you're done
+' Also, don't bother displaying
+' the read-only box. It'll only confuse people.</font>
+    lngFlags = ahtOFN_FILEMUSTEXIST Or _
+                ahtOFN_HIDEREADONLY Or ahtOFN_NOCHANGEDIR
+    If IsMissing(varDirectory) Then
+        varDirectory = ""
+    End If
+    If IsMissing(varTitleForDialog) Then
+        varTitleForDialog = ""
+    End If
+
+    <font class="CComment">' Define the filter string and allocate space <layer id="google-toolbar-hilite-13" style="background-color: Chartreuse; color: black;">in</layer> the "c"
+    ' string Duplicate this line with changes as necessary for
+    ' more file templates.</font>
+    strFilter = ahtAddFilterItem(strFilter, _
+                "Access (*.mdb)", "*.MDB;*.MDA")
+    <font class="CComment">' Now actually call to get the file name.</font>
+    varFileName = ahtCommonFileOpenSave( _
+                    OpenFile:=True, _
+                    InitialDir:=varDirectory, _
+                    Filter:=strFilter, _
+                    Flags:=lngFlags, _
+                    DialogTitle:=varTitleForDialog)
+    If Not IsNull(varFileName) Then
+        varFileName = TrimNull(varFileName)
+    End If
+    GetOpenFile = varFileName
+End Function
+
+Function ahtCommonFileOpenSave( _
+            Optional ByRef Flags As Variant, _
+            Optional ByVal InitialDir As Variant, _
+            Optional ByVal Filter As Variant, _
+            Optional ByVal FilterIndex As Variant, _
+            Optional ByVal DefaultExt As Variant, _
+            Optional ByVal FileName As Variant, _
+            Optional ByVal DialogTitle As Variant, _
+            Optional ByVal hwnd As Variant, _
+            Optional ByVal OpenFile As Variant) As Variant
+<font class="CComment">' This is the entry point you'll use to call the common
+' file open/save dialog. The parameters are listed
+' below, and all are optional.
+'
+' <layer id="google-toolbar-hilite-14" style="background-color: Chartreuse; color: black;">In</layer>:
+' Flags: one or more of the ahtOFN_* constants, OR'd together.
+' InitialDir: the directory <layer id="google-toolbar-hilite-15" style="background-color: Chartreuse; color: black;">in</layer> which to first look
+' Filter: a set of file filters, set up by calling
+' AddFilterItem. See examples.
+' FilterIndex: 1-based integer indicating which filter
+' set to use, by default (1 if unspecified)
+' DefaultExt: Extension to use if the user doesn't enter one.
+' Only useful on file saves.
+' FileName: Default value for the file name text box.
+' DialogTitle: Title for the dialog.
+' hWnd: parent <layer id="google-toolbar-hilite-6" style="background-color: Fuchsia; color: black;">window</layer> handle
+' OpenFile: Boolean(True=Open File/False=Save As)
+' Out:
+' Return Value: Either Null or the selected filename</font>
+Dim OFN As tagOPENFILENAME
+Dim strFileName As String
+Dim strFileTitle As String
+Dim fResult As Boolean
+    <font class="CComment">' Give the dialog a caption title.</font>
+    If IsMissing(InitialDir) Then InitialDir = CurDir
+    If IsMissing(Filter) Then Filter = ""
+    If IsMissing(FilterIndex) Then FilterIndex = 1
+    If IsMissing(Flags) Then Flags = 0&amp;
+    If IsMissing(DefaultExt) Then DefaultExt = ""
+    If IsMissing(FileName) Then FileName = ""
+    If IsMissing(DialogTitle) Then DialogTitle = ""
+    If IsMissing(hwnd) Then hwnd = Application.hWndAccessApp
+    If IsMissing(OpenFile) Then OpenFile = True
+    <font class="CComment">' Allocate string space for the returned strings.</font>
+    strFileName = Left(FileName &amp; String(256, 0), 256)
+    strFileTitle = String(256, 0)
+    <font class="CComment">' Set up the data structure before you call the function</font>
+    With OFN
+        .lStructSize = Len(OFN)
+        .hwndOwner = hwnd
+        .strFilter = Filter
+        .nFilterIndex = FilterIndex
+        .strFile = strFileName
+        .nMaxFile = Len(strFileName)
+        .strFileTitle = strFileTitle
+        .nMaxFileTitle = Len(strFileTitle)
+        .strTitle = DialogTitle
+        .Flags = Flags
+        .strDefExt = DefaultExt
+        .strInitialDir = InitialDir
+        <font class="CComment">' Didn't think most people would want to deal with
+        ' these options.</font>
+        .hInstance = 0
+        <font class="CComment">'.strCustomFilter = ""
+        '.nMaxCustFilter = 0</font>
+        .lpfnHook = 0
+        <font class="CComment">'New for NT 4.0</font>
+        .strCustomFilter = String(255, 0)
+        .nMaxCustFilter = 255
+    End With
+    <font class="CComment">' This will pass the desired data structure to the
+    ' Windows API, which will <layer id="google-toolbar-hilite-16" style="background-color: Chartreuse; color: black;">in</layer> turn it uses to display
+    ' the Open/Save As Dialog.</font>
+    If OpenFile Then
+        fResult = aht_apiGetOpenFileName(OFN)
+    Else
+        fResult = aht_apiGetSaveFileName(OFN)
+    End If
+
+    <font class="CComment">' The function call filled <layer id="google-toolbar-hilite-17" style="background-color: Chartreuse; color: black;">in</layer> the strFileTitle member
+    ' of the structure. You'll have to write special code
+    ' to retrieve that if you're interested.</font>
+    If fResult Then
+        <font class="CComment">' You might care to check the Flags member of the
+        ' structure to get information about the chosen file.
+        ' <layer id="google-toolbar-hilite-18" style="background-color: Chartreuse; color: black;">In</layer> this example, if you bothered to pass <layer id="google-toolbar-hilite-19" style="background-color: Chartreuse; color: black;">in</layer> a
+        ' value for Flags, we'll fill it <layer id="google-toolbar-hilite-20" style="background-color: Chartreuse; color: black;">in</layer> with the outgoing
+        ' Flags value.</font>
+        If Not IsMissing(Flags) Then Flags = OFN.Flags
+        ahtCommonFileOpenSave = TrimNull(OFN.strFile)
+    Else
+        ahtCommonFileOpenSave = vbNullString
+    End If
+End Function
+
+Function ahtAddFilterItem(strFilter As String, _
+    strDescription As String, Optional varItem As Variant) As String
+<font class="CComment">' Tack a new chunk onto the file filter.
+' That is, take the old value, stick onto it the description,
+' (like "Databases"), a null character, the skeleton
+' (like "*.mdb;*.mda") and a final null character.</font>
+
+    If IsMissing(varItem) Then varItem = "*.*"
+    ahtAddFilterItem = strFilter &amp; _
+                strDescription &amp; vbNullChar &amp; _
+                varItem &amp; vbNullChar
+End Function
+
+Private Function TrimNull(ByVal strItem As String) As String
+Dim intPos As Integer
+    intPos = InStr(strItem, vbNullChar)
+    If intPos &gt; 0 Then
+        TrimNull = Left(strItem, intPos - 1)
+    Else
+        TrimNull = strItem
+    End If
+End Function
+<font class="CComment">'************** Code End *****************</font></pre>
+        		</td>
+        	</tr>
+    	</tbody></table>
+	</td>
+	<td valign="top"><img src="api0001_archivos/spacer.gif" border="0" height="4" width="4"></td>
+  </tr>
+</tbody></table>
+<img src="api0001_archivos/spacer.gif" border="0" height="5" width="1"><br>
+<!--Footer Begin-->
+<!--webbot bot="Include" U-Include="../_inc/footer.htm" TAG="BODY" startspan -->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr><td class="CLine" width="100%">
+      <img src="api0001_archivos/spacer.gif" border="0" height="1" width="1"></td></tr>
+	<tr><td align="center" valign="middle" width="100%">
+	<sub><font color="#53595b">© 1998-2007, Dev Ashish &amp; Arvin Meyer, All rights reserved. Optimized for</font>
+    <a class="CFootnoteFont" href="http://www.microsoft.com/windows/ie/">Microsoft Internet Explorer</a></sub><br>&nbsp;</td></tr>
+	<tr><td class="CLine" width="100%">
+      <img src="api0001_archivos/spacer.gif" border="0" height="1" width="1"></td></tr>
+	<tr><td width="100%"><img src="api0001_archivos/spacer.gif" border="0" height="4" width="10"></td></tr>
+</tbody></table>
+<!--webbot bot="Include" i-checksum="45000" endspan -->
+<!--Footer End-->
+</body></html>

@@ -1,0 +1,400 @@
+% es un simbolo para hacer comentarios
+% clase del 15 de enero, arreglos de numeros
+x=(1 2 3) % un vector renglon
+??? x=(1 2 3) % un vector renglon
+         |
+{Error: Unexpected MATLAB expression.
+} 
+x=[1 2 3] % un vector renglon
+
+x =
+
+     1     2     3
+
+y=[2;3;5] % con punto y coma o espacios
+
+y =
+
+     2
+     3
+     5
+
+%es un vector columna
+z= [2 1 0]; % el punto y coma es porque no nos interesa el output
+x+z
+
+ans =
+
+     3     3     3
+
+x+y
+{??? Error using ==> plus
+Matrix dimensions must agree.
+} 
+/clear
+??? /clear
+    |
+{Error: Unexpected MATLAB operator.
+} 
+x.*z % producto punto
+
+ans =
+
+     2     2     0
+
+x
+
+x =
+
+     1     2     3
+
+z
+
+z =
+
+     2     1     0
+
+x.*z %es el producto elemento a elemento
+
+ans =
+
+     2     2     0
+
+x./z %tambien se puede dividir de la misma manera elemento a elemento
+
+ans =
+
+    0.5000    2.0000       Inf
+
+3*x % es un escalar por un vector no se necesita el punto
+
+ans =
+
+     3     6     9
+
+x= inspace(0,10,5) % crea un vector con cinco elementos linealmente espaciados por diez unidades empezando en cero
+{??? Undefined function or method 'inspace' for input arguments of type
+'double'.
+} 
+x= linspace(0,10,5)
+
+x =
+
+         0    2.5000    5.0000    7.5000   10.0000
+
+x= linspace(0,10,5)  % crea un vector con cinco elementos linealmente espaciados entre 0 y 10
+
+x =
+
+         0    2.5000    5.0000    7.5000   10.0000
+
+sin(x) % a cada componente le aplica sin
+
+ans =
+
+         0    0.5985   -0.9589    0.9380   -0.5440
+
+%notemos que matlab aplica todo a los vectores, permitiendo hacer cosas como
+y
+
+y =
+
+     2
+     3
+     5
+
+z
+
+z =
+
+     2     1     0
+
+y=sin(x)
+
+y =
+
+         0    0.5985   -0.9589    0.9380   -0.5440
+
+sqrt(x).*sin(y)%hacer cosas como esta
+
+ans =
+
+         0    0.8908   -1.8304    2.2084   -1.6367
+
+%EJERCICIO: la ecuacion de una recta es Y=mx+c donde m, c son constantes calcular las coordenadas y de una recta con pediente m=0.5 y con intercepto c= -2 en los valores de x=0,1.5,3,4,5,7,9,10
+Y=mx+c
+{??? Undefined function or variable 'mx'.
+} 
+Y=m*x+c
+{??? Undefined function or variable 'm'.
+} 
+m=0.5
+
+m =
+
+    0.5000
+
+c=-2
+
+c =
+
+    -2
+
+x=0
+
+x =
+
+     0
+
+y=m*x+c
+
+y =
+
+    -2
+
+x=1.5;y=m*x+c
+
+y =
+
+   -1.2500
+
+x=3;y=m*x+c
+
+y =
+
+   -0.5000
+
+x=4;y=m*x+c
+
+y =
+
+     0
+
+x=5;y=m*x+c
+
+y =
+
+    0.5000
+
+x=7;y=m*x+c
+
+y =
+
+    1.5000
+
+x=9;y=m*x+c
+
+y =
+
+    2.5000
+
+x=10;y=m*x+c
+
+y =
+
+     3
+
+x=[0,1.5,3,4,5,7,9,10]
+
+x =
+
+  Columns 1 through 7
+
+         0    1.5000    3.0000    4.0000    5.0000    7.0000    9.0000
+
+  Column 8
+
+   10.0000
+
+y=m*x+c
+
+y =
+
+  Columns 1 through 7
+
+   -2.0000   -1.2500   -0.5000         0    0.5000    1.5000    2.5000
+
+  Column 8
+
+    3.0000
+
+%ejercicio crear un vector t con 10 elementos 1,2,...,10
+%calcular las siguientes operaciones
+%x=t sin(t)
+%y=(t-1)/(t+1)
+%z=sin(t^2)/(t^2)
+t=[1,2,3,4,5,6,7,8,9,10];
+x=t.*sin(t); y=(t-1)./(t+1); z=sin(t^2)./(t^2)
+{??? Error using ==> mpower
+Matrix must be square.
+} 
+x=t.*sin(t); y=(t-1)./(t+1);
+x
+
+x =
+
+  Columns 1 through 6
+
+    0.8415    1.8186    0.4234   -3.0272   -4.7946   -1.6765
+
+  Columns 7 through 10
+
+    4.5989    7.9149    3.7091   -5.4402
+
+y
+
+y =
+
+  Columns 1 through 6
+
+         0    0.3333    0.5000    0.6000    0.6667    0.7143
+
+  Columns 7 through 10
+
+    0.7500    0.7778    0.8000    0.8182
+
+z=sin(mpower(t,2))./(mpower(t,2))
+{??? Error using ==> mpower
+Matrix must be square.
+} 
+z=sin(t.^2))./(t.^2))
+??? z=sin(t.^2))./(t.^2))
+               |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+z=sin(t.^2)./(t.^2))
+??? z=sin(t.^2)./(t.^2))
+                       |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+z=sin(t.^2)./(t.^2)
+
+z =
+
+  Columns 1 through 6
+
+    0.8415   -0.1892    0.0458   -0.0180   -0.0053   -0.0275
+
+  Columns 7 through 10
+
+   -0.0195    0.0144   -0.0078   -0.0051
+
+%EJERCICIO 3: todos los puntos con coordenadas  x=rcos(tetha)
+%y y= rsin(tetha) donde r es una constanteestan en un circulo
+%con radio r i.e. satisfacen la ecuación x^2+y^2=r^2 crear
+%un vector colomna para tetha con los valores tetha=0, pi/4
+%pi/2  3pi/4 pi   5pi/4 hacer r=2 y calcular los vectores
+%columna x e y
+%verificar que en efecto X e Y satisfacen la ecuación del circulo
+pi
+
+ans =
+
+    3.1416
+
+tetha=linspace(0,5*pi/4,5)
+
+tetha =
+
+         0    0.9817    1.9635    2.9452    3.9270
+
+x= r*cos(tetha)
+{??? Undefined function or variable 'r'.
+} 
+x= 2*cos(tetha)
+
+x =
+
+    2.0000    1.1111   -0.7654   -1.9616   -1.4142
+
+x= 2*sin(tetha)
+
+x =
+
+         0    1.6629    1.8478    0.3902   -1.4142
+
+x+y
+{??? Error using ==> plus
+Matrix dimensions must agree.
+} 
+x.+y
+??? x.+y
+      |
+{Error: Unexpected MATLAB operator.
+} 
+y= 2*sin(tetha)
+
+y =
+
+         0    1.6629    1.8478    0.3902   -1.4142
+
+x+y
+
+ans =
+
+         0    3.3259    3.6955    0.7804   -2.8284
+
+x.^2+y.^2
+
+ans =
+
+         0    5.5307    6.8284    0.3045    4.0000
+
+tetha
+
+tetha =
+
+         0    0.9817    1.9635    2.9452    3.9270
+
+[0,pi/4,pi/2,3*pi/4, pi , 5*pi/4]
+
+ans =
+
+         0    0.7854    1.5708    2.3562    3.1416    3.9270
+
+tetha=[0;pi/4;pi/2;3*pi/4; pi ; 5*pi/4]
+
+tetha =
+
+         0
+    0.7854
+    1.5708
+    2.3562
+    3.1416
+    3.9270
+
+x= 2*cos(tetha)
+
+x =
+
+    2.0000
+    1.4142
+    0.0000
+   -1.4142
+   -2.0000
+   -1.4142
+
+y= 2*sin(tetha)
+
+y =
+
+         0
+    1.4142
+    2.0000
+    1.4142
+    0.0000
+   -1.4142
+
+x.^2+y.^2
+
+ans =
+
+     4
+     4
+     4
+     4
+     4
+     4
+
+diary session2.out
+diary off

@@ -1,0 +1,10 @@
+%Programa que saluda, presenta la fecha, la hora
+%con disp, fix, clock, data
+disp('Cant let you do that starfox')
+disp('Hoy es'), disp(date)
+fechayhora = fix(clock);
+hora=int2str(fechayhora(4)); % & int2str(fechayhora(5)) & int2str(fechayhora(6)
+disp(hora)
+if fechayhora(5)<10
+    minutos=['0',fechayhora(5)]
+end

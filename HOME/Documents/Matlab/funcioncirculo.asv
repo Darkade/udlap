@@ -1,0 +1,10 @@
+function [x,y]=circulofn(r);
+% circulofn - una funcion para crear un circulo
+% de radio r y centro 0,0
+
+theta = linspace (0,2*pi,100);
+x=cos(theta); y=sin(theta);
+plot (x,y);
+axis('equal')
+title('Circulo de radio r =',num2str(r))
+

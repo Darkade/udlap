@@ -1,0 +1,22 @@
+A=[20 2 1 ;2 20 -2;-2 14 10]; % Definimos la matriz
+[V,D]=eig(A); % calculamos sus vectores propios
+
+disp('------------------------Halle los vectores propios de A-----------------------------------')
+
+disp('Vectores propios')
+V
+disp('Valores propios')
+D
+
+
+disp('------------------------Muestre computacionalmente que los valores propios de A^2
+disp(son los cuadrados de los valores propios de A--------------------')
+Dquad=D^2;
+disp('Cuadrados de los valores propios de A. D^2')
+[Dquad(1,1),Dquad(2,2),Dquad(3,3)]'
+disp('Valores propios de A^2. eig(A^2)')
+eig(A^2)
+
+disp('------------------------Calcule los cuadrados de los valores propios de A^2 y')
+disp('                        Muestre, computacionalmente, que estos son los valores propios de A^4-------------')
+

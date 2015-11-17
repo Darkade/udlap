@@ -1,0 +1,25 @@
+%Script que calcula el area en la region acotada por
+%y=x
+%y=x^3
+disp('1. Graficar la región acotada por las curvas dadas y hallar el area de la región.');
+disp('      y = x; y = x^3');
+
+syms x;
+%area = int(x,0,1) - int(x^3,0,1);
+
+ezplot(x);hold on;ezplot(x^3);axis([0 5 0 5]);
+
+x2=[linspace(0,1,10) linspace(0,1,10)];
+y2=[linspace(0,1,10)  linspace(0,1,10).^3];
+fill(x2,y2,'r');
+
+title('Region acotada por x, x^3');xlabel('x');ylabel('y');
+text(1,.5,'<- Region acotada por y = x; y = x^3')
+%text(1,.2,num2str(area))
+
+hold off;
+
+disp('El area de la región es:');
+%area
+
+quad()

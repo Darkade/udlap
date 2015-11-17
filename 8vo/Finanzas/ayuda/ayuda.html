@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Ayuda Valuador de opciones.</title>
+</head>
+<body>
+	<h1>Ayuda Valuador de opciones</h1>
+	<p><b>Para correr el programa vaya a la carpeta dist y corra interfaz.exe</b></p>
+	<h2>&Iacute;ndice</h2>
+	<ol>
+		<li><a href="#uno">Bienvenido al valuador de opciones</a></li>
+		<li><a href="#dos">Datos de entrada validos</a></li>
+		<li><a href="#tres">Limitaciones del software</a></li>
+		<li><a href="#cuatro">El c&oacute;digo fuente</a></li>
+		<li><a href="#cinco">C&oacute;mo funciona?</a></li>
+		<li><a href="#seis">De Python</a></li>
+	</ol>
+	<h3 id="uno">Bienvenido al valuador de opciones</h3>
+	<p>Bienvenido, el valuador de opciones ha sido desarrollado para asistirle al valuar opciones mediante el m&eacute;todo binomial. Este software ha sido desarrollado suando Python y GTK+ y se distribuye bajo la licencia GPL, esta licencia se encuentra disponible en <a href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a> Este programa es software libre</p>
+	<h3 id="dos">Datos de entrada V&aacute;lidos</h3>
+	<p>La entrada de datos al software es mediante cajas de texto, estas cajas no solo aceptan número sino expresiones matemáticas como: <k>2/3</k> o <k>10-3</k></p>
+	<img src="imagen1.png"><br>
+	<img src="imagen2.png"><br>
+	<p>Los campos aceptan las siguientes entradas</p>
+	<ol>
+	<li>u: coeficiente de alza de precio: Que tanto se alza el precio por cada paso en el arbol</li>
+	<li>d: coeficiente de baja de precio: Qu&eacute; tanto baja el precio por cada paso</li>
+	<li>r: Tasa libre de riesgo expresada anualmente</li>
+	<li>x: Precio de ejercicio para la opción</li>
+	<li>Precio Spot: El precio al día de hoy del activo</li>
+	<li>Tiempo: El tiempo hasta la expiración de la opción, expresada en años. Seis meses se pueden expresar <k>1/2</k>,<k>6/12</k>, etc.</li>
+	<li>Niveles: Para cuantos niveles se va a manejar el arbol</li>
+	</ol>
+	<h3 id="tres">Limitaciones del programa</h3>
+	<p>La única limitación que se encontro en tiempo de desarrollo fue para niveles mayores a 1029 pasos, es decir, el software no evaluará opciones si se le pide un arbol de más de 1029 niveles</p>
+	<h3 id="cuatro">El c&oacute;digo fuente</h3>
+	<p>El codigo fuente esta disponible en la carpeta "C&oacute;digo fuente" son archivos .py, es decir de fuente de Python. Estos archivos se deben de poder abrir en cualquier editor de texto que soporte "Plain Text Files"</p>
+	<h3 id="cinco">C&oacute;mo funciona?</h3>
+	<p>El software esta difivido en dos partes, una librer&iacute;a que realiza todo el trabajo, y una interfaz grafica, que simplemente muestra el formulario y se conecta con la librer&iacute;a</p>
+	<p>ya que en windows Python no esta disponible se debio compilarlo usando py2exe, el cual exporta <k>todas</k> las dependencias necesarias para el programa. es por esto que son tantos archivos cuando normalmente solo serían los que estan incluidos en la carpeta de codigo fuente</p>
+	<h3 id="seis">De Python</h3>
+	<p>Python es un lenguaje de programación libre y de codigo abierto cuyo lema es "Batteries Included" esta disponible (preinstalado) en todos los sistemas operativos basados en Unix (Mac OS X, Linux, BSD) y para Windows mediante instalación explicita en 32 bits. Es por esto que el valuador debería de funcionar con solo el código fuente en cualquier sistema operativo *nix</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+# coding=UTF-8
+
+from libreria import *
+
+binomial = metodo_binomial()
+
+tiempo=1.0
+nivel=2
+
+
+
+#print [[ (binomial.st(i-k,k),binomial.f(i-k,k,'call')) for k in range(0,i+1) ] for i in range(0,nivel+1)]
+
+for i in range(0,nivel+1):
+	for k in range(0,i+1):
+		print tiempo/(i+1)
+		print (binomial.st(i-k,k),binomial.evaluar(nivel-i,tiempo/(i+1),'call'))
+

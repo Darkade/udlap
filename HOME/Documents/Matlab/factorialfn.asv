@@ -1,0 +1,11 @@
+function [n]=factorialfn(n);
+%Funcion que calcula el factorial de un numero natural
+%if n==1
+%    return
+%else
+%    n=n*factorialfn(n-1);
+%end
+
+for k=(1:n)
+    n
+end

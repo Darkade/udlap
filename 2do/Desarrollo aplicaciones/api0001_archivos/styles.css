@@ -1,0 +1,131 @@
+body, body div,  body th, body td, body.dd, body.dt {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: smaller;
+	background-color: White;
+}
+
+table {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+HR {
+	height: 1pt;
+}
+a:active, a:focus, a:link {
+	color: blue;
+}
+a:hover {
+	color: #868672;
+}
+a:visited {
+	color: #0066CC;
+}
+pre  					{
+	background-color: #F0F8FF;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.CPageTitle {
+	color : #53595B;
+	font-size : medium;
+}
+a.CPageTitleLink:link {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #7878C4;
+	text-decoration: underline;
+}
+a.CPageTitleLink:visited {
+	color: #7878C4;
+	text-decoration: underline;
+}
+a.CPageTitleLink:active {
+	color:  #7878C4;
+	text-decoration: underline;
+}
+a.CPageTitleLink:hover {
+	color: #868672;
+	text-decoration: underline;
+}
+
+.CTopTanBorder		{ 
+	BORDER-Top: #BF633C solid 1pt ;
+}
+.CCreditsWBorder		{ 
+	BORDER-Bottom: #BF633C solid 1pt ;
+	COLOR: #bf633c; 
+	LETTER-SPACING: 2pt;
+	font-size : medium
+}
+.CCredits {
+	COLOR: #bf633c; 
+	LETTER-SPACING: 1.5pt;
+	font-size: -1px;
+}
+.CAuthor {
+	COLOR: #7E8CAA; 
+	font-size: -1px;
+}
+.CComment 	{ 
+  color:#008000; 
+  FONT-WEIGHT:normal 
+}
+.CDesc	{
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    color: #6B7584;
+    font-size : smaller;
+}
+.CLine {
+	background-color: #008080;
+}
+.CGrayLine {
+	background-color: #DEE7CE;
+}
+.CToolBar { 
+	background-color: #DEE7CE; 
+}
+a.CFootnoteFont {
+	color: #7E7EFF;
+}
+a.CPlainURL {
+	text-decoration : none;
+}
+a.CToolBarItem:link {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #7878C4;
+	text-decoration: underline;
+}
+a.CToolBarItem:visited {
+	color: #7878C4;
+	text-decoration: underline;
+}
+a.CToolBarItem:active {
+	color:  #7878C4;
+	text-decoration: underline;
+}
+a.CToolBarItem:hover{
+	color: #C04000;
+	text-decoration: underline;
+}
+.CCreditsTopBottomBorder { 
+	BORDER-TOP: #BF633C solid 1pt;
+	BORDER-BOTTOM: #BF633C solid 1pt
+}
+.LightCaption { 
+	font-size: smaller ; 
+	color: #808080
+}
+.CGraySmallHeading 	{ 
+	COLOR: gray; 
+	FONT-WEIGHT: bold;
+}
+.CTitle	{ 
+	COLOR: #004080; 	
+	FONT-WEIGHT: Bold
+}
+.CBurgundyTitle {
+	COLOR: #800000; 	
+	FONT-WEIGHT: Bold
+}
+.CSectionTitle { 
+	color: #669999;  
+	font-weight: bold;   
+}

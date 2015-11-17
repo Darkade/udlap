@@ -1,0 +1,574 @@
+%Capitulo 2 calculo interactivo con MATLAB
+%Una matris se entra en forma de fila, con los elementos consecutivos de una
+% fila separados por un espacio o una coma
+% y las filas separadas por punto y coma. La matriz va entre corchetes
+% sus elementos pueden ser reales, complejos, o expresiones MATLAB varias
+% Ejemplo:
+[1 2 3 ; 4 5 6]
+
+ans =
+
+     1     2     3
+     4     5     6
+
+x=2;y=1; B=[2*x, log x + sin y ; 5i 3+2i]
+{??? Error using ==> log
+Not enough input arguments.
+} 
+x=2;y=1; B=[2*x log x + sin y ; 5i 3+2i]
+{??? Error using ==> log
+Not enough input arguments.
+} 
+x=2;y=1; B=[2*x log(x) + sin(y) ; 5i 3+2i]
+
+B =
+
+   4.0000             1.5346          
+        0 + 5.0000i   3.0000 + 2.0000i
+
+%No es aconsejable usar i,j para contadores o variables ya que son
+% reservadas de MATLAB
+%Un vector es una matriz de una sola linea
+[1 2 3]
+
+ans =
+
+     1     2     3
+
+%% Un escalar es sin corchetes
+x=3
+
+x =
+
+     3
+
+% Una matriz nula es
+x=[]
+
+x =
+
+     []
+
+% podemos usar 3 puntos suspensivos cuando no es posible poner el input
+% en la misma linea, como cuando tenemos una matriz muy grande
+x= [1/3 5.65*sin(x) 9.35 0.097
+;
+...
+3/(x*2*log(x)) 3 0 6.555; ...
+]
+{??? Error using ==> mrdivide
+Matrix dimensions must agree.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097; ...
+3/(x*2*log(x)) 3 0 6.555]
+{??? Error using ==> mrdivide
+Matrix dimensions must agree.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097; 3/(x*2*log(x)) 3 0 6.555]
+{??? Error using ==> mrdivide
+Matrix dimensions must agree.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097; (3/(x*2*log(x))) 3 0 6.555]
+{??? Error using ==> mrdivide
+Matrix dimensions must agree.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097; ((x*2*log(x))) 3 0 6.555]
+
+x =
+
+    0.3333    9.3500    0.0970
+    3.0000         0    6.5550
+
+x= [1/3 5.65*sin(x) 9.35 0.097; (3./(x*2*log(x))) 3 0 6.555]
+{??? Error using ==> horzcat
+CAT arguments dimensions are not consistent.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097; (3/x*2*log(x))) 3 0 6.555]
+??? x= [1/3 5.65*sin(x) 9.35 0.097; (3/x*2*log(x))) 3 0 6.555]
+                                                  |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097; (3/.(x*2*log(x))) 3 0 6.555]
+??? x= [1/3 5.65*sin(x) 9.35 0.097; (3/.(x*2*log(x))) 3 0 6.555]
+                                       |
+{Error: Unexpected MATLAB operator.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097; (3/(x*2*log(x))) 3 0 6.555]
+{??? Error using ==> horzcat
+CAT arguments dimensions are not consistent.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097; 3/(x*2*log(x)) 3 0 6.555]
+{??? Error using ==> horzcat
+CAT arguments dimensions are not consistent.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097; (x*2*log(x)) 3 0 6.555]
+{??? Error using ==> horzcat
+CAT arguments dimensions are not consistent.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097 ; (x*2*log(x)) 3 0 6.555]
+{??? Error using ==> horzcat
+CAT arguments dimensions are not consistent.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097 ; x*2*log(x) 3 0 6.555]
+{??? Error using ==> horzcat
+CAT arguments dimensions are not consistent.
+} 
+x= [1/3 5.65*sin(x) 9.35 0.097  x*2*log(x) 3 0 6.555]
+{??? Error using ==> mtimes
+Inner matrix dimensions must agree.
+} 
+Y= [1/3 5.65*sin(x) 9.35 0.097 ; x*2*log(x) 3 0 6.555]
+{??? Error using ==> horzcat
+CAT arguments dimensions are not consistent.
+} 
+Y= [1/3 5.65*sin(x) 9.35 0.097 x*2*log(x) 3 0 6.555]
+{??? Error using ==> mtimes
+Inner matrix dimensions must agree.
+} 
+Y= [1/3 5.65*sin(x) 9.35 0.097 x*2*log(x) 3 0 6.555]
+{??? Undefined function or variable 'x'.
+} 
+x=1
+
+x =
+
+     1
+
+Y= [1/3 5.65*sin(x) 9.35 0.097 x*2*log(x) 3 0 6.555]
+
+Y =
+
+  Columns 1 through 6
+
+    0.3333    4.7543    9.3500    0.0970         0    3.0000
+
+  Columns 7 through 8
+
+         0    6.5550
+
+Y= [1/3 5.65*sin(x) 9.35 0.097 ; x*2*log(x) 3 0 6.555]
+
+Y =
+
+    0.3333    4.7543    9.3500    0.0970
+         0    3.0000         0    6.5550
+
+Y= [1/3 5.65*sin(x) 9.35 0.097 ; 3/(x*2*log(x)) 3 0 6.555]
+
+Y =
+
+    0.3333    4.7543    9.3500    0.0970
+       Inf    3.0000         0    6.5550
+
+% subindices matriciales
+% una vez que una matriz existe se puede acceder a sus
+%  elementos o una parte de ella de la siguiente forma
+Y(3,4)
+{??? Attempted to access Y(3,4); index out of bounds because
+size(Y)=[2,4].
+} 
+Y(1,2)
+
+ans =
+
+    4.7543
+
+Y(0,2)
+{??? Attempted to access Y(0,2); index must be a positive
+integer or logical.
+} 
+Y(1,2)
+
+ans =
+
+    4.7543
+
+Y(;,1,2)
+??? Y(;,1,2)
+      |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+Y(:,1,2)
+{??? Index exceeds matrix dimensions.
+} 
+Y(1,2)
+
+ans =
+
+    4.7543
+
+% Dimención, comando size. Si aplicamos size(matriz)
+% obtenemos la dimención de esta por ejemplo
+size(Y)
+
+ans =
+
+     2     4
+
+% produce un vector filas, columnas
+%Matlab crea matrices suficentemente grandes para acomodar 
+% elementos cuando se ha introducido un solo elemento o algunos
+% por ejemplo
+D(2,3)=5
+
+D =
+
+     0     0     0
+     0     0     5
+
+C(3,1:3) = [1 3 2]
+
+C =
+
+     0     0     0
+     0     0     0
+     1     3     2
+
+E(3,2:5) = [1 3 2]
+{??? Subscripted assignment dimension mismatch.
+} 
+E(3,2:4) = [1 3 2]
+
+E =
+
+     0     0     0     0
+     0     0     0     0
+     0     1     3     2
+
+E(3,2:5) = [1 3 2 6]
+
+E =
+
+     0     0     0     0     0
+     0     0     0     0     0
+     0     1     3     2     6
+
+% Manipulación de matrices
+A = [ 1 2 3 ; 4 5 6 ; 7 8 9 ]
+
+A =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+A(3,1)
+
+ans =
+
+     7
+
+C=[9 8 7]
+
+C =
+
+     9     8     7
+
+A(3,1)=C
+{??? Subscripted assignment dimension mismatch.
+} 
+B=A(2:3,1:3)
+
+B =
+
+     4     5     6
+     7     8     9
+
+B=A(2:3,1:2)
+
+B =
+
+     4     5
+     7     8
+
+B=A(2:3,:2)
+??? B=A(2:3,:2)
+             |
+{Error: Unexpected MATLAB expression.
+} 
+B=A(2:3,:)
+
+B =
+
+     4     5     6
+     7     8     9
+
+B(:,2)=[]
+
+B =
+
+     4     6
+     7     9
+
+Q=[2 3 6 0 5; 0 0 20 -4 3; 1 2 3 9 8; 2 -5 5 -5 6 ; 5 10 15 20 25]
+
+Q =
+
+     2     3     6     0     5
+     0     0    20    -4     3
+     1     2     3     9     8
+     2    -5     5    -5     6
+     5    10    15    20    25
+
+Y=[1,4,5]
+
+Y =
+
+     1     4     5
+
+Q(:,Y)
+
+ans =
+
+     2     0     5
+     0    -4     3
+     1     9     8
+     2    -5     6
+     5    20    25
+
+Y
+
+Y =
+
+     1     4     5
+
+Q([1,3,5],Y)
+
+ans =
+
+     2     0     5
+     1     9     8
+     5    20    25
+
+Q([1,3,5],Y)'
+
+ans =
+
+     2     1     5
+     0     9    20
+     5     8    25
+
+C=[2 3+i;6i 7i]
+
+C =
+
+   2.0000             3.0000 + 1.0000i
+        0 + 6.0000i        0 + 7.0000i
+
+C=[2 3+i;6i 7i]'
+
+C =
+
+   2.0000                  0 - 6.0000i
+   3.0000 - 1.0000i        0 - 7.0000i
+
+%inicializacion de matrices
+A=zeroes(6,7)
+{??? Undefined function or method 'zeroes' for input arguments
+of type 'double'.
+} 
+A=zeros(6,7)
+
+A =
+
+     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0
+
+A(3,:)2*log(3)
+??? A(3,:)2*log(3)
+          |
+{Error: Unexpected MATLAB expression.
+} 
+A(3,:)=2*log(3)
+
+A =
+
+  Columns 1 through 6
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+    2.1972    2.1972    2.1972    2.1972    2.1972    2.1972
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+
+  Column 7
+
+         0
+         0
+    2.1972
+         0
+         0
+         0
+
+A
+
+A =
+
+  Columns 1 through 6
+
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+    2.1972    2.1972    2.1972    2.1972    2.1972    2.1972
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+         0         0         0         0         0         0
+
+  Column 7
+
+         0
+         0
+    2.1972
+         0
+         0
+         0
+
+A
+
+A =
+
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    2.1972    2.1972    2.1972    2.1972    2.1972    2.1972    2.1972
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+
+% Añadir una fila o columna
+A=zeros(3,3);
+A(0,0)=1
+{??? Attempted to access A(0,0); index must be a positive integer or logical.
+} 
+A(1,1)=1
+
+A =
+
+     1     0     0
+     0     0     0
+     0     0     0
+
+A(2,2)=1
+
+A =
+
+     1     0     0
+     0     1     0
+     0     0     0
+
+A(,2)=1
+??? A(,2)=1
+      |
+{Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+A(3,3)=1
+
+A =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+u=[5 6 7]; v =[2;3;4]
+
+v =
+
+     2
+     3
+     4
+
+A=[A;u] %ampliamos a un nuevo renglon
+
+A =
+
+     1     0     0
+     0     1     0
+     0     0     1
+     5     6     7
+
+A=[A v] %ampliamos a una nueva columna
+{??? Error using ==> horzcat
+CAT arguments dimensions are not consistent.
+} 
+v =[2;3;4;0]
+
+v =
+
+     2
+     3
+     4
+     0
+
+A=[A v] %ampliamos a una nueva columna
+
+A =
+
+     1     0     0     2
+     0     1     0     3
+     0     0     1     4
+     5     6     7     0
+
+%Ejemplo del uso de for
+B=[]
+
+B =
+
+     []
+
+for k=1:3, B=[B;k+1 k+2]
+end
+
+B =
+
+     2     3
+
+
+B =
+
+     2     3
+     3     4
+
+
+B =
+
+     2     3
+     3     4
+     4     5
+
+B=[];for k=1:3, B=[B; k k+1 k+2]; end
+B
+
+B =
+
+     1     2     3
+     2     3     4
+     3     4     5
+
+B=[];for k=1:3, B=[B; k k+1 k+2] end
+??? B=[];for k=1:3, B=[B; k k+1 k+2] end
+                                     |
+{Error: Illegal use of reserved keyword "end".
+} 
+B=[];for k=1:3, B=[B; k k+1 k+2]
+end
+
+B =
+
+     1     2     3
+
+
+B =
+
+     1     2     3
+     2     3     4
+
+
+B =
+
+     1     2     3
+     2     3     4
+     3     4     5
+

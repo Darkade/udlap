@@ -1,0 +1,9 @@
+Cuando se usa el modelo continuo al final todos se retiran. Esto es porque todos los grupos
+tienen una probabilidad de llegar al grupo de retirados, pero una vez en el grupo de retirados
+no se puede ir a ningun otro grupo. Entonces despues de muchas temporadas el valor del equipo
+llega hasta cero, todos estan en retirados.
+
+En el caso del modelo discreto, al redondear las cantidades se observa que hay ciertas
+probabilidades que al multiplicarlas por los números enteros no son significativas, de modo que
+los grupos permanecen estaticos sin importar el numero de temporadas que han pasado.
+Con este modelo se observa que el equipo tiene un costo de $4,900,000
